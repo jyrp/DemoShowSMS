@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 String[] filterArgs = {"%late%","%min%"};
 
                 // Fetch SMS Message from Built-in Content Provider
-                Cursor cursor = cr.query(uri, reqCols, null, null, null);
+                Cursor cursor = cr.query(uri, reqCols, filter, filterArgs, null);
                 String smsBody = "";
                 if (cursor.moveToFirst()) {
                     do {
